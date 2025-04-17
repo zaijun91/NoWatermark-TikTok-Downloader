@@ -2,9 +2,29 @@
 
 欢迎使用 TikTok 批量下载器！这是一个简单易用的图形界面工具，专门设计用来帮助您轻松批量下载无水印的 TikTok 视频和图集。
 
+**一点说明 (关于 API):** 为了让您第一次使用时更方便，我们尝试在程序启动时自动为您配置几个我们找到的第三方 TikTok 解析 API。这些 API 是用来帮助程序“看懂”您给的 TikTok 链接，并找到无水印视频地址的关键。您可以在程序顶部菜单栏的“设置” -> “API 设置”里看到这些预设的 API。
+
+**请您理解:** 这些预设的 API 通常是公开的免费服务，它们有时可能会因为使用者太多、服务调整或者其他原因变得不稳定或暂时失效。所以，如果您发现下载没反应、失败了，或者下载下来的视频仍然带有水印，**这很可能就是预设 API 的问题，不是程序本身坏了。**
+
+**怎么办呢？** 很简单！遇到这种情况，最好的办法就是去“设置” -> “API 设置”里：
+1.  **添加您自己的 API:** 您可以参考下面“配置 API”部分的指引，去网上（比如 RapidAPI Hub）找一个可靠的 API 服务，然后把它添加到列表里。
+2.  **激活您的 API:** 添加完成后，选中您添加的那个 API，然后点击“设为活动”按钮。这样程序就会优先使用您自己的、更可靠的 API 来进行下载了。
+
+我们加入预设 API 是为了方便您起步，但长远来看，使用您自己配置的 API 会是更稳定、更可靠的选择。
+
 **最方便的是，项目已包含一个 Windows 安装包 (`Output/TikBoltSetup-v1.1.exe`)！** 您可以直接运行它来安装程序，无需关心 Python 环境或复杂的配置，非常适合普通用户快速上手。
 
 Welcome to the TikTok Batch Downloader! This is a user-friendly graphical tool designed to help you easily batch download TikTok videos and albums without watermarks.
+
+**A Note on APIs:** To make your first experience smoother, we try to automatically configure a few third-party TikTok parsing APIs when you first launch the program. These APIs are crucial as they help the program "understand" the TikTok links you provide and find the watermark-free video sources. You can see these preset APIs under "Settings" -> "API Settings" in the top menu bar.
+
+**Please Understand:** These preset APIs are often public, free services. Sometimes, they might become unstable or temporarily unavailable due to high traffic, service changes, or other reasons. So, if you find that downloads aren't starting, are failing, or the downloaded videos still have watermarks, **it's very likely an issue with the preset API, not a bug in the program itself.**
+
+**What should you do?** It's simple! When this happens, the best approach is to go to "Settings" -> "API Settings" and:
+1.  **Add Your Own API:** Follow the guide in the "Configure API" section below to find a reliable API service online (like on RapidAPI Hub) and add it to the list.
+2.  **Activate Your API:** After adding it, select your own API from the list and click the "Set Active" button. This tells the program to prioritize using your more dependable API for downloads.
+
+While the presets are there to help you get started, using your own configured API is generally the more stable and reliable option in the long run.
 
 **Most conveniently, the project includes a Windows installer (`Output/TikBoltSetup-v1.1.exe`)!** You can run it directly to install the program without worrying about Python environments or complex configurations, making it perfect for regular users to get started quickly.
 
@@ -56,11 +76,11 @@ You can directly download the pre-compiled Windows installer (`.exe`), no Python
 
 **下载链接 / Download Link:**
 
-[**点击此处下载最新安装包 (TikBoltSetup-v1.1.exe)**](https://github.com/zaijun91/tiktok/releases/download/V2.0/TikBoltSetup-v1.1.exe)
+[**点击此处下载最新安装包 (TikBoltSetup-v1.1.exe)**](https://github.com/zaijun91/NoWatermark-TikTok-Downloader/releases/download/V1.1/TikBoltSetup-v1.1.exe)
 
 **(您可以直接点击上面的链接从 GitHub Releases 下载 v1.1 安装包)**
 
-**(Note: The link above is a placeholder. It needs to be replaced with the actual download link after the project is uploaded to GitHub Releases. The current installer is located in the project's `Output/` directory: `Output/TikBoltSetup-v1.1.exe`)**
+**(Note: The link above points to the v1.1 release. The current installer is also located in the project's `Output/` directory: `Output/TikBoltSetup-v1.1.exe`)**
 
 ### 2. 安装 / Installation
 
@@ -70,37 +90,46 @@ After downloading the `.exe` file, double-click to run the installer and follow 
 
 ### 3. 配置 API / Configure API (重要! / Important!)
 
-首次运行程序前或下载失败时，您**必须**配置至少一个有效的第三方 TikTok 解析 API。这些 API 用于获取无水印的视频/图集信息。
+**首次运行程序时，您可能会在 API 设置中看到一些预设的 API 选项。** 这些是为了方便您快速开始。
 
-Before running the program for the first time or if downloads fail, you **must** configure at least one valid third-party TikTok parsing API. These APIs are used to fetch watermark-free video/album information.
+**但是，无论是否有预设，您仍然需要检查 API 设置，并确保至少有一个有效的 API 被设为“活动”状态，程序才能正常下载。** 第三方 API 用于获取无水印的视频/图集信息。
+
+**请注意:** 预设的 API 可能来自公共服务，其稳定性或可用性无法保证。如果下载失败或视频仍有水印，强烈建议您自行查找并添加新的、可靠的 API 配置。
+
+**Before running the program for the first time, you might see some pre-configured API options in the API Settings.** These are provided for your convenience to get started quickly.
+
+**However, regardless of presets, you still need to check the API settings and ensure at least one valid API is set as "Active" for the program to download correctly.** These APIs are used to fetch watermark-free video/album information.
+
+**Please note:** Pre-configured APIs might be from public services, and their stability or availability cannot be guaranteed. If downloads fail or videos still have watermarks, it is strongly recommended to find and add new, reliable API configurations yourself.
 
 *   启动程序。
+*   启动程序。
 *   点击菜单栏的 “设置” -> “API 设置”。
-*   点击 “添加...” 按钮。
-*   输入 API 的信息：
-    *   **名称:** 给 API 起一个容易识别的名字 (例如 "RapidAPI-XYZ")。
+*   **检查列表:** 查看是否已有预设 API。
+*   **添加 (如果需要):** 如果列表为空，或预设 API 无效，点击 “添加...” 按钮，输入 API 信息：
+    *   **名称:** 给 API 起一个容易识别的名字 (例如 "MyRapidAPI")。
     *   **URL:** API 的请求地址。
     *   **API Key (可选):** 某些 API (如 RapidAPI) 需要 Key。
     *   **API Host (可选):** 某些 API (如 RapidAPI) 需要 Host。
     *   **参数名称 (可选):** API 接收 TikTok 链接的参数名 (默认为 `url`)。
     *   **请求方法 (可选):** 通常是 `GET` (默认) 或 `POST`。
-*   点击 “确定” 保存。
-*   **选择一个 API 并点击 “设为活动”**。程序将优先使用活动 API。
-*   **提示:** 您可以在网上搜索 "TikTok downloader API" 或访问 [RapidAPI Hub](https://rapidapi.com/hub) 查找可用的 API 服务。请注意，这些第三方 API 的可用性和稳定性可能会变化。
+    *   点击 “确定” 保存。
+*   **选择并激活:** 从列表中选择一个您认为可靠的 API (无论是预设的还是您自己添加的)，然后**务必点击 “设为活动”**。程序将优先使用标记为“活动”的 API。
+*   **提示:** 您可以在网上搜索 "TikTok downloader API" 或访问 [RapidAPI Hub](https://rapidapi.com/hub) 查找可用的 API 服务。添加您自己的 API 通常更稳定可靠。
 
 *   Launch the program.
 *   Click on "设置 (Settings)" -> "API 设置 (API Settings)" in the menu bar.
-*   Click the "添加... (Add...)" button.
-*   Enter the API information:
-    *   **名称 (Name):** Give the API an easily recognizable name (e.g., "RapidAPI-XYZ").
+*   **Check the list:** See if there are any pre-configured APIs.
+*   **Add (if needed):** If the list is empty, or the preset APIs don't work, click the "添加... (Add...)" button and enter the API information:
+    *   **名称 (Name):** Give the API an easily recognizable name (e.g., "MyRapidAPI").
     *   **URL:** The request URL of the API.
     *   **API Key (Optional):** Some APIs (like RapidAPI) require a Key.
     *   **API Host (Optional):** Some APIs (like RapidAPI) require a Host.
     *   **参数名称 (Param Name) (Optional):** The parameter name the API uses for the TikTok link (defaults to `url`).
     *   **请求方法 (Method) (Optional):** Usually `GET` (default) or `POST`.
-*   Click "确定 (OK)" to save.
-*   **Select an API and click "设为活动 (Set Active)"**. The program will prioritize the active API.
-*   **Tip:** You can search online for "TikTok downloader API" or visit the [RapidAPI Hub](https://rapidapi.com/hub) to find available API services. Note that the availability and stability of these third-party APIs may vary.
+    *   Click "确定 (OK)" to save.
+*   **Select and Activate:** Choose an API you trust from the list (either preset or one you added) and **make sure to click "设为活动 (Set Active)"**. The program will prioritize the API marked as "Active".
+*   **Tip:** You can search online for "TikTok downloader API" or visit the [RapidAPI Hub](https://rapidapi.com/hub) to find available API services. Adding your own API is generally more stable and reliable.
 
 ### 4. 配置下载设置 / Configure Download Settings
 
@@ -150,8 +179,8 @@ If you prefer to run from the source code, you need Python and the necessary lib
 
 1.  **克隆仓库 / Clone Repository:**
     ```bash
-    git clone https://github.com/zaijun91/tiktok.git
-    cd tiktok
+    git clone https://github.com/zaijun91/NoWatermark-TikTok-Downloader.git
+    cd NoWatermark-TikTok-Downloader
     ```
 
 2.  **安装依赖 / Install Dependencies:**
