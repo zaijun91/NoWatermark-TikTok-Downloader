@@ -1,0 +1,6 @@
+# Direct dependencies for TikBolt (Versions need to be pinned manually based on dev environment)
+requests
+httpx
+PySide6
+aiohttp
+aiofiles
