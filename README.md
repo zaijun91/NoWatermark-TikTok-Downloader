@@ -56,9 +56,9 @@ You can directly download the pre-compiled Windows installer (`.exe`), no Python
 
 **下载链接 / Download Link:**
 
-[**点击此处下载最新安装包 (TikBoltSetup-vX.X.exe)**](PLACEHOLDER_FOR_RELEASE_LINK)
+[**点击此处下载最新安装包 (TikBoltSetup-v1.1.exe)**](https://github.com/zaijun91/tiktok/releases/download/V2.0/TikBoltSetup-v1.1.exe)
 
-**(注意：上面的链接是占位符，项目上传到 GitHub Releases 后需要替换为实际的下载链接。当前安装包位于项目的 `Output/` 目录下：`Output/TikBoltSetup-v1.1.exe`)**
+**(您可以直接点击上面的链接从 GitHub Releases 下载 v1.1 安装包)**
 
 **(Note: The link above is a placeholder. It needs to be replaced with the actual download link after the project is uploaded to GitHub Releases. The current installer is located in the project's `Output/` directory: `Output/TikBoltSetup-v1.1.exe`)**
 
@@ -150,11 +150,9 @@ If you prefer to run from the source code, you need Python and the necessary lib
 
 1.  **克隆仓库 / Clone Repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-    cd YOUR_REPOSITORY_NAME
+    git clone https://github.com/zaijun91/tiktok.git
+    cd tiktok
     ```
-    (请将 `YOUR_USERNAME/YOUR_REPOSITORY_NAME` 替换为实际的仓库地址)
-    (Please replace `YOUR_USERNAME/YOUR_REPOSITORY_NAME` with the actual repository path)
 
 2.  **安装依赖 / Install Dependencies:**
     ```bash
