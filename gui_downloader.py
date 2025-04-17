@@ -668,7 +668,55 @@ def load_config():
             valid_proxy_types = ['none', 'system', 'http', 'socks5']
             if final_config["proxy_config"].get("type") not in valid_proxy_types:
                 logger.warning(f"配置文件中的代理类型 '{final_config['proxy_config'].get('type')}' 无效，已重置为 'none'。")
-                final_config["proxy_config"]["type"] = "none"
+            final_config["proxy_config"]["type"] = "none"
+
+        # --- Add Default APIs if list is empty ---
+        if not final_config.get("api_endpoints"):
+            logger.info("[Config] API 端点列表为空，正在添加默认 API 配置...")
+            default_apis = [
+                {
+                    "name": "Scraptik",
+                    "url": "https://scraptik.p.rapidapi.com/video/fetch",
+                    "key": "a4caac798dmshd5ec67ce2620472p1d28a8jsnf07cf019cb4c",
+                    "host": "scraptik.p.rapidapi.com",
+                    "param_name": "url",
+                    "method": "GET"
+                },
+                {
+                    "name": "TikTok Scraper2",
+                    "url": "https://tiktok-scraper2.p.rapidapi.com/video/info_v2",
+                    "key": "a4caac798dmshd5ec67ce2620472p1d28a8jsnf07cf019cb4c",
+                    "host": "tiktok-scraper2.p.rapidapi.com",
+                    "param_name": "video_url",
+                    "method": "GET"
+                },
+                {
+                    "name": "No Watermark 2",
+                    "url": "https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list",
+                    "key": "a4caac798dmshd5ec67ce2620472p1d28a8jsnf07cf019cb4c",
+                    "host": "tiktok-video-no-watermark2.p.rapidapi.com",
+                    "param_name": "url",
+                    "method": "GET"
+                },
+                {
+                    "name": "No Watermark 2 Alt",
+                    "url": "https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list",
+                    "key": "60089b5e4amshf028066572f9e06p111fb7jsnd69b8af4cf42",
+                    "host": "tiktok-video-no-watermark2.p.rapidapi.com",
+                    "param_name": "url",
+                    "method": "GET"
+                }
+            ]
+            final_config["api_endpoints"] = default_apis
+            # Set the first default API as active if none was active
+            if not final_config.get("active_api_name"):
+                final_config["active_api_name"] = default_apis[0]["name"]
+                logger.info(f"[Config] 已将第一个默认 API '{default_apis[0]['name']}' 设为活动状态。")
+
+            # Save the config with default APIs added
+            logger.info("[Config] 正在保存包含默认 API 的配置...")
+            save_config(final_config)
+        # -----------------------------------------
 
         logger.info(f"[Config] 验证并合并后的配置: {final_config}") # Log final config
         return final_config
