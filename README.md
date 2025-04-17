@@ -1,8 +1,12 @@
 # TikTok 批量下载器 (GUI & CLI) / TikTok Batch Downloader (GUI & CLI)
 
-这是一个用于批量下载无水印 TikTok 视频和图集的工具，提供了图形用户界面 (GUI) 和命令行界面 (CLI) 两种使用方式。
+欢迎使用 TikTok 批量下载器！这是一个简单易用的图形界面工具，专门设计用来帮助您轻松批量下载无水印的 TikTok 视频和图集。
 
-This is a tool for batch downloading TikTok videos and albums without watermarks. It provides both a Graphical User Interface (GUI) and a Command-Line Interface (CLI).
+**最方便的是，项目已包含一个 Windows 安装包 (`Output/TikBoltSetup-v1.1.exe`)！** 您可以直接运行它来安装程序，无需关心 Python 环境或复杂的配置，非常适合普通用户快速上手。
+
+Welcome to the TikTok Batch Downloader! This is a user-friendly graphical tool designed to help you easily batch download TikTok videos and albums without watermarks.
+
+**Most conveniently, the project includes a Windows installer (`Output/TikBoltSetup-v1.1.exe`)!** You can run it directly to install the program without worrying about Python environments or complex configurations, making it perfect for regular users to get started quickly.
 
 ---
 
